@@ -1,0 +1,20 @@
+{
+    "name": "salt/salt",
+    "description": "The Salt Framework",
+    "type": "project",
+    "require": {
+        "symfony/var-dumper": "6.2.x-dev"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mahedi Hasan"
+        }
+    ],
+    "minimum-stability": "dev"
+}
