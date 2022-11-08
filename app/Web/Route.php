@@ -2,11 +2,11 @@
 
 namespace App\Web;
 
-use App\Web\Html;
 use App\Http\Request\Request;
 use App\Http\Response\Response;
+use App\Http\Controllers\Controller;
 
-class Router extends Html
+class Route extends Controller
 {    
     protected array $routes = [];
 
@@ -33,6 +33,7 @@ class Router extends Html
         if(is_array($callback)) {
             $callback[0] = new $callback[0]();
         }
-        return call_user_func($callback);
+
+        return call_user_func($callback, $request);
     }
 }

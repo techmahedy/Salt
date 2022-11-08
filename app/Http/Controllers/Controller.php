@@ -1,8 +1,8 @@
-<?php
+<?php 
 
-namespace App\Web;
+namespace App\Http\Controllers;
 
-class Html
+class Controller
 {
     public function view($view, $params = [])
     {   
@@ -14,7 +14,7 @@ class Html
     public function layout()
     {   
         ob_start();
-        include_once __DIR__ . "/../../views/layouts/master.php";
+        include_once __DIR__ . "/../../../views/layouts/master.php";
         return ob_get_clean();
     }
 
@@ -25,7 +25,7 @@ class Html
         }
 
         ob_start();
-        include_once __DIR__ . "/../../views/{$view}.php";
+        include_once __DIR__ . "/../../../views/{$view}.php";
         return ob_get_clean();
     }
 }

@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Web\Html;
+use App\Http\Request\Request;
+use App\Http\Controllers\Controller;
 
-class ContactController extends Html
+class ContactController extends Controller
 {   
     public function welcome()
     {   
@@ -20,8 +21,10 @@ class ContactController extends Html
         return $this->view('contact');
     }
 
-    public function store()
-    {
-        return 'submit form';
+    public function store(Request $request)
+    {   
+        if($request->isPost()){
+            dump($request->getBody());
+        }
     }
 }
