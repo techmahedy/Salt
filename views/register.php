@@ -1,4 +1,4 @@
-<h1 class="text-center">Contact</h1>
+<h1 class="text-center">Register</h1>
 <form action="" method="post">
   <div class="mb-3">
     <label class="form-label">Subject</label>
