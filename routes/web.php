@@ -12,3 +12,4 @@ $app->route->post('/contact', [ContactController::class,'store']);
  */
 $app->route->get('/login', [AuthController::class,'showLoginForm']);
 $app->route->get('/register', [AuthController::class,'showRegisterForm']);
+$app->route->post('/register', [AuthController::class,'registerUser']);
