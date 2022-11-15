@@ -3,7 +3,8 @@
     "description": "The Salt Framework",
     "type": "project",
     "require": {
-        "symfony/var-dumper": "6.2.x-dev"
+        "symfony/var-dumper": "6.2.x-dev",
+        "vlucas/phpdotenv": "5.5.x-dev"
     },
     "license": "MIT",
     "autoload": {

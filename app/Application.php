@@ -3,6 +3,8 @@
 namespace App;
 
 use App\Web\Route;
+use App\Database\Database;
+use App\Database\Connection;
 use App\Http\Request\Request;
 
 class Application
@@ -11,11 +13,13 @@ class Application
 
     public Route $route;
     public Request $request;
+    public Database $database;
 
-    public function __construct()
+    public function __construct($config = [])
     {   
         $this->request = new Request();
         $this->route = new Route($this->request);
+        $this->database = new Database($config);
     }
 
     public function run()
